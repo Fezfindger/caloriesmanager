@@ -14,7 +14,7 @@ import static com.itstep.caloriesmanager.util.ValidationUtil.checkNotFoundWithId
 @Service
 public class UserServiceImpl implements UserService {
 
-    private final UserRepository repository;
+    private UserRepository repository;
 
     @Autowired
     public UserServiceImpl(UserRepository repository) {

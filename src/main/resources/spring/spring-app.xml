@@ -7,6 +7,18 @@
     <!--
         <bean class="ru.javawebinar.topjava.repository.mock.MockUserRepositoryImpl" id="mockUserRepository"/>
 
-    <bean class="com.itstep.caloriesmanager.repository.mock.MockUserRepositoryImpl" id="mockUserRepository"/>
+        <bean class="ru.javawebinar.topjava.service.UserServiceImpl">
+            <constructor-arg name="repository" ref="mockUserRepository"/>
+        </bean>
+    -->
+
+    <!-- Not necessary, already included with component-scan -->
+    <!--<context:annotation-config/>-->
+
+    <context:component-scan base-package="com.itstep.caloriesmanager.**.repository"/>
+
+    <context:component-scan base-package="com.itstep.caloriesmanager.**.service"/>
+
+    <context:component-scan base-package="com.itstep.caloriesmanager.**.web"/>
 
 </beans>
