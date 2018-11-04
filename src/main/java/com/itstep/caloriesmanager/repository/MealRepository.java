@@ -2,22 +2,14 @@ package com.itstep.caloriesmanager.repository;
 
 import com.itstep.caloriesmanager.model.Meal;
 
-import java.time.LocalDateTime;
-import java.util.List;
+import java.util.Collection;
 
 public interface MealRepository {
-    // null if updated meal do not belong to userId
-    Meal save(Meal meal, int userId);
+    Meal save(Meal meal);
 
-    // false if meal do not belong to userId
-    boolean delete(int id, int userId);
+    void delete(int id);
 
-    // null if meal do not belong to userId
-    Meal get(int id, int userId);
+    Meal get(int id);
 
-    // ORDERED dateTime desc
-    List<Meal> getAll(int userId);
-
-    // ORDERED dateTime desc
-    List<Meal> getBetween(LocalDateTime startDate, LocalDateTime endDate, int userId);
+    Collection<Meal> getAll();
 }
