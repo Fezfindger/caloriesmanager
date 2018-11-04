@@ -1,5 +1,7 @@
 package com.itstep.caloriesmanager;
 
+import com.itstep.caloriesmanager.model.Role;
+import com.itstep.caloriesmanager.model.User;
 import com.itstep.caloriesmanager.repository.UserRepository;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
