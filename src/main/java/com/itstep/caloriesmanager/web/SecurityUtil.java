@@ -1,7 +1,5 @@
 package com.itstep.caloriesmanager.web;
 
-import com.itstep.caloriesmanager.model.AbstractBaseEntity;
-
 import static com.itstep.caloriesmanager.util.MealsUtil.DEFAULT_CALORIES_PER_DAY;
 
 public class SecurityUtil {
