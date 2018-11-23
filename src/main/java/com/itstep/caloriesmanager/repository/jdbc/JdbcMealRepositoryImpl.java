@@ -1,8 +1,10 @@
 package com.itstep.caloriesmanager.repository.jdbc;
 
+import com.itstep.caloriesmanager.Profiles;
 import com.itstep.caloriesmanager.model.Meal;
 import com.itstep.caloriesmanager.repository.MealRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.dao.support.DataAccessUtils;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -13,6 +15,7 @@ import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -73,7 +76,6 @@ public class JdbcMealRepositoryImpl implements MealRepository {
         return DataAccessUtils.singleResult(meals);
     }
 
-    @Transactional
     @Override
     public List<Meal> getAll(int userId) {
         return jdbcTemplate.query(
@@ -87,4 +89,5 @@ public class JdbcMealRepositoryImpl implements MealRepository {
                 ROW_MAPPER, userId, startDate, endDate);
     }
 }
+
 

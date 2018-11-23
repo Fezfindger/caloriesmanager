@@ -1,8 +1,8 @@
 package com.itstep.caloriesmanager.web;
 
+import com.itstep.caloriesmanager.Profiles;
 import com.itstep.caloriesmanager.model.Meal;
 import com.itstep.caloriesmanager.web.meal.MealRestController;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.servlet.ServletConfig;
