@@ -1,7 +1,5 @@
 package com.itstep.caloriesmanager.service;
 
-import com.itstep.caloriesmanager.ActiveDbProfileResolver;
-import com.itstep.caloriesmanager.Profiles;
 import com.itstep.caloriesmanager.model.Role;
 import com.itstep.caloriesmanager.model.User;
 import com.itstep.caloriesmanager.util.exception.NotFoundException;
